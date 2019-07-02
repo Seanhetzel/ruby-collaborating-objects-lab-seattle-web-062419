@@ -26,12 +26,10 @@ class Artist
   end
 
   def self.find_or_create_by_name(name)
-    #if @@all.find(name)
-    #  self
-    #else
-    #  self.new(name)
-    #end
-    self.find(name) ? self.find(name) : self.create(name)
-
+    if @@all.find(name)
+      self
+    else
+      self.new(name)
+    end
   end
 end
