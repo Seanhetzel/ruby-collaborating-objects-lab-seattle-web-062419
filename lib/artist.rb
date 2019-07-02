@@ -29,7 +29,7 @@ class Artist
     if @@all.find(name)
       self
     else
-      "hi"
+      self.new(name)
     end
   end
 end
